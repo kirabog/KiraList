@@ -1,0 +1,28 @@
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Rajdhani',sans-serif;}
+body {background:#f5f5f5; color:#222; min-height:100vh;}
+header {display:flex; align-items:center; justify-content:space-between; padding:15px 20px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.1);}
+.menu-btn, .info-btn {font-size:1.3rem; cursor:pointer;}
+.site-title {font-weight:700; font-size:1.3rem;}
+.tabs {display:flex; justify-content:center; gap:10px; margin:20px 0;}
+.tab-btn {padding:10px 20px; border:none; cursor:pointer; background:#eee; border-radius:5px; font-weight:600;}
+.tab-btn.active {background:#222; color:#fff;}
+.tab-content {max-width:900px; margin:0 auto; padding:0 15px;}
+#searchInput {width:100%; padding:10px; margin-bottom:10px; border-radius:5px; border:1px solid #ccc;}
+.filters {display:flex; flex-wrap:wrap; gap:5px; margin-bottom:15px;}
+.filters button {padding:5px 10px; border:none; border-radius:4px; cursor:pointer; background:#eee;}
+.filters button.active {background:#222;color:#fff;}
+.profile-list {display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:15px;}
+.profile-item {background:#fff; padding:10px; border-radius:8px; cursor:pointer; transition:0.3s; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+.profile-item:hover {transform:translateY(-3px); box-shadow:0 4px 10px rgba(0,0,0,0.15);}
+.profile-item img {width:100%; border-radius:50%; margin-bottom:10px;}
+.profile-name {font-weight:600; font-size:1rem; text-align:center;}
+.profile-tag {text-align:center; font-size:0.85rem; color:#666; margin-top:3px;}
+.profile-modal {display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:1000;}
+.profile-card {background:#fff; padding:20px; border-radius:10px; max-width:400px; width:90%; position:relative; text-align:center;}
+.close-profile {position:absolute; top:10px; right:10px; border:none; background:none; font-size:1.3rem; cursor:pointer;}
+.profile-card img {width:120px; border-radius:50%; margin-bottom:10px;}
+.status-icons span {display:block; font-size:0.85rem; margin:3px 0; color:#555;}
+.status-icons span:nth-child(1) {color:green;}
+.status-icons span:nth-child(2) {color:blue;}
+.status-icons span:nth-child(3) {color:orange;}
+.status-icons span:nth-child(4) {color:purple;}
