@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kira List</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Видео фон -->
+<video autoplay muted loop class="video-background">
+    <source src="overlay.mp4" type="video/mp4">
+</video>
+
+<!-- Верхняя панель -->
+<header class="top-bar">
+    <div class="hamburger" id="menuBtn"><i class="fas fa-bars"></i></div>
+    <div class="site-title">Kira List</div>
+    <div class="faq-btn" id="faqBtn"><i class="fas fa-question-circle"></i></div>
+</header>
+
+<!-- Меню FAQ -->
+<div class="faq-panel" id="faqPanel">
+    <h3>По всем вопросам обращайтесь:</h3>
+    <p>@empered</p>
+    <h4>Услуги и цены:</h4>
+    <ul>
+        <li>Вход в фейм-лист: бесплатно</li>
+        <li>Галочка (верификация): 50 зв</li>
+        <li>Закреп профиля: 50 зв</li>
+        <li>Оплата только через Telegram</li>
+    </ul>
+</div>
+
+<!-- Контент -->
+<main class="container">
+    <!-- Вкладки -->
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="news">Новости</button>
+        <button class="tab-btn" data-tab="list">Лист</button>
+    </div>
+
+    <!-- Новости -->
+    <div class="tab-content" id="news">
+        <div class="news-box">
+            <span class="news-author">Отправлено создателем:</span>
+            <p>Всем здравствуйте, спасибо кто пользуется листом и приобретает функции!</p>
+            <a href="https://t.me/+LPsd5NVMmH4xZmQ6" target="_blank" class="news-btn">Наш проект</a>
+            <a href="https://t.me/empered" target="_blank" class="news-btn">Создатель</a>
+        </div>
+    </div>
+
+    <!-- Лист -->
+    <div class="tab-content" id="list" style="display:none;">
+        <input type="text" id="search" placeholder="Поиск профиля...">
+        <div class="profile-list">
+            <!-- Профиль 1 -->
+            <div class="profile-card" data-name="Кира всевышний">
+                <img src="kira.jpg" class="profile-avatar" alt="Кира">
+                <div class="profile-name">Кира всевышний</div>
+                <div class="profile-meta">@empered</div>
+                <div class="profile-full" style="display:none;">
+                    <strong>Описание:</strong>
+                    <p>Я не обязан быть идеальным, чтобы идти вперёд — мне достаточно быть честным с собой. 
+                    Во мне больше глубины и света, чем кажется со стороны, я перестал спрашивать разрешения быть собой. 
+                    Не так важно, какую силу ты имеешь — всё решает талант и то, как ты им пользуешься.</p>
+                </div>
+            </div>
+
+            <!-- Профиль 2 -->
+            <div class="profile-card" data-name="peace | Гештальт">
+                <img src="peace.jpg" class="profile-avatar" alt="Peace">
+                <div class="profile-name">peace | Гештальт</div>
+                <div class="profile-meta">@PeaceGeshtalt</div>
+                <div class="profile-full" style="display:none;">
+                    <strong>Описание:</strong>
+                    <p>Peace — пример текста для второго профиля, можно добавить любое описание, цитаты и детали.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
