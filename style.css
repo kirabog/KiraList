@@ -1,0 +1,172 @@
+* { box-sizing: border-box; font-family: system-ui; }
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1c1c1c, #0b0b0b 70%);
+  color: #fff;
+}
+
+.topbar {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(12px);
+}
+
+.hamburger, .help {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+}
+
+.side-menu {
+  position: fixed;
+  top: 56px;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background: rgba(20,20,20,0.95);
+  transition: 0.3s;
+  padding: 20px;
+}
+
+.side-menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+
+.help-box {
+  position: fixed;
+  top: 70px;
+  right: 10px;
+  width: 260px;
+  background: rgba(30,30,30,0.95);
+  padding: 14px;
+  border-radius: 14px;
+  display: none;
+}
+
+.container {
+  padding: 16px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.05);
+  border: none;
+  color: #fff;
+}
+
+.tab.active {
+  background: rgba(255,255,255,0.15);
+}
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.news-box {
+  padding: 16px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 18px;
+}
+
+.search {
+  width: 100%;
+  padding: 12px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+  border: none;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filter {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: none;
+  color: #fff;
+}
+
+.filter.active {
+  background: rgba(255,255,255,0.2);
+}
+
+.profiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+  gap: 12px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 18px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.name { margin-top: 8px; font-weight: 600; }
+.tag { font-size: 12px; opacity: 0.7; }
+.desc { font-size: 12px; opacity: 0.6; }
+
+.profile-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-box {
+  background: rgba(30,30,30,0.95);
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 320px;
+  text-align: center;
+}
+
+.profile-box img {
+  width: 90px;
+  border-radius: 50%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 22px;
+  cursor: pointer;
+}
