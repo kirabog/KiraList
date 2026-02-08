@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kira List</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Анимированные полоски сверху -->
+    <div class="top-bars">
+        <span></span><span></span><span></span>
+    </div>
+
+    <!-- Гамбургер меню -->
+    <div class="menu-btn" id="menuBtn">
+        <i class="fas fa-bars"></i>
+    </div>
+    <nav class="side-menu" id="sideMenu">
+        <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#about">О НАС</a></li>
+        </ul>
+    </nav>
+
+    <!-- Заголовок сайта -->
+    <header>
+        <h1>Kira List</h1>
+    </header>
+
+    <!-- Вкладки -->
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="news">Новости</button>
+        <button class="tab-btn" data-tab="list">Лист</button>
+    </div>
+
+    <!-- Контент вкладок -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="news">
+            <p>Здесь будут новости про обновления</p>
+        </div>
+        <div class="tab-pane" id="list">
+            <div class="profile-card" id="kiraProfile">
+                <img src="img/avatar.jpg" alt="Kira" class="avatar">
+                <h2>Kira Всевышний</h2>
+                <span class="nick">@empered</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для профиля -->
+    <div class="modal" id="profileModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <img src="img/avatar.jpg" alt="Kira" class="modal-avatar">
+            <h2>Kira Всевышний</h2>
+            <p>Полное описание: Защита, прокачка навыков, кодинг, безопасность и многое другое.</p>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
