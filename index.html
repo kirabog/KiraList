@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kira List</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Видео фон -->
+<video class="bg-video" autoplay muted loop>
+    <source src="overlay.mp4" type="video/mp4">
+</video>
+
+<!-- Шапка -->
+<header>
+    <div class="header-left">
+        <div id="burger" class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1>Kira List</h1>
+    </div>
+    <div class="header-right">
+        <div id="faq-btn" class="faq-btn">?</div>
+    </div>
+</header>
+
+<!-- Гамбургер меню -->
+<nav id="burger-menu" class="burger-menu">
+    <ul>
+        <li data-tab="main" class="active-tab">Главная</li>
+        <li id="faq-link">FAQ</li>
+        <li id="price-link">Прайс</li>
+    </ul>
+</nav>
+
+<!-- Модалка FAQ -->
+<div id="faq-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>FAQ</h2>
+        <p>По всем вопросам обращайтесь: <strong>@empered</strong></p>
+        <p>Услуги и цены:</p>
+        <ul>
+            <li>Вход в фейм-лист: бесплатно</li>
+            <li>Галочка (верификация): 50 зв</li>
+            <li>Закреп профиля: 50 зв</li>
+            <li>Оплата только через Telegram</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Основной контент -->
+<main>
+    <div class="tabs">
+        <button class="tab-btn active-tab-btn" data-tab="news">Новости</button>
+        <button class="tab-btn" data-tab="list">Лист</button>
+    </div>
+
+    <!-- Новости -->
+    <section id="news" class="tab-content active">
+        <div class="news-box">
+            <p class="news-title">Отправлено создателем</p>
+            <p>Всем здравствуйте, спасибо кто пользуется листом и приобретает функции!</p>
+            <a href="https://t.me/+LPsd5NVMmH4xZmQ6" target="_blank" class="btn-link">Наш проект</a>
+            <a href="https://t.me/empered" target="_blank" class="btn-link">Создатель</a>
+        </div>
+    </section>
+
+    <!-- Лист -->
+    <section id="list" class="tab-content">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Поиск по нику...">
+        </div>
+        <div id="profiles" class="profiles-grid">
+            <!-- Пример профиля -->
+            <div class="profile-card" data-name="Кира всевышний">
+                <img src="KiraListBaza/kira.jpg" alt="Кира" class="profile-avatar">
+                <h3>Кира всевышний</h3>
+                <div class="profile-pre">ⓘ Профиль верифицирован ✅</div>
+                <div class="profile-pre">ⓘ Премиум активен</div>
+                <div class="profile-pre">ⓘ Закреплено</div>
+                <div class="profile-pre">ⓘ Кастом нет</div>
+                <div class="profile-description" style="display:none;">
+                    <strong>Описание:</strong> Я не обязан быть идеальным, чтобы идти вперёд — мне достаточно быть честным с собой. Во мне больше глубины и света, чем кажется со стороны, я перестал спрашивать разрешения быть собой. Не так важно, какую силу ты имеешь — всё решает талант и то, как ты им пользуешься.
+                    <br><small>@empered | peace | Гештальт</small>
+                </div>
+            </div>
+
+            <div class="profile-card" data-name="peace | Гештальт">
+                <img src="KiraListBaza/peace.jpg" alt="Peace" class="profile-avatar">
+                <h3>peace | Гештальт</h3>
+                <div class="profile-pre">ⓘ Профиль верифицирован ✅</div>
+                <div class="profile-pre">ⓘ Премиум активен</div>
+                <div class="profile-pre">ⓘ Закреплено</div>
+                <div class="profile-pre">ⓘ Кастом нет</div>
+                <div class="profile-description" style="display:none;">
+                    <strong>Описание:</strong> Профиль Peace, описание пользователя. Здесь можно написать что угодно.
+                    <br><small>@izrezal</small>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Модалки профилей на весь экран -->
+<div id="profile-modal" class="modal">
+    <div class="modal-content profile-modal-content">
+        <span class="close">&times;</span>
+        <img id="modal-avatar" src="" alt="Avatar">
+        <h2 id="modal-name"></h2>
+        <p id="modal-status"></p>
+        <p id="modal-description"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
